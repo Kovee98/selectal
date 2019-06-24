@@ -2,14 +2,13 @@ var Selectal = function(selectStr) {
     // Create the necessary elements and structure
     var select = document.querySelector(selectStr);
     var options = select.querySelectorAll('option');
-    var wrapper = document.createElement('div');
-    wrapper.className = "wrapper";
-    document.querySelector('body').appendChild(wrapper);
+    this.wrapper = document.createElement('div');
+    this.wrapper.className = "selectal-wrapper";
 
     this.selectGroup = document.createElement('div');
     this.selectGroup.className = "selectal-group";
     this.selectGroup.id = select.id;
-    wrapper.appendChild(selectGroup);
+    this.wrapper.appendChild(this.selectGroup);
 
     this.selectBtn = document.createElement('div');
     this.selectBtn.className = "selectal-btn";
@@ -17,13 +16,13 @@ var Selectal = function(selectStr) {
     this.selectedItem = document.createElement('p');
     this.selectedItem.id = "selectal-selected-item";
     this.selectedItem.innerHTML = options[0].innerHTML;
-    this.selectBtn.appendChild(selectedItem);
+    this.selectBtn.appendChild(this.selectedItem);
 
     this.arrow = document.createElement('span');
     this.arrow.id = "arrow";
     this.arrow.className = "arrow-up";
-    this.selectBtn.appendChild(arrow);
-    this.selectGroup.appendChild(selectBtn);
+    this.selectBtn.appendChild(this.arrow);
+    this.selectGroup.appendChild(this.selectBtn);
 
     this.dropdown = document.createElement('div');
     this.dropdown.className = "selectal-dropdown";
@@ -35,23 +34,25 @@ var Selectal = function(selectStr) {
         option.innerHTML = options[i].innerHTML;
         this.dropdown.appendChild(option);
     }
-    this.selectGroup.appendChild(dropdown);
+    this.selectGroup.appendChild(this.dropdown);
 
     var selectId = select.id;
-    select.remove();
     this.input = document.createElement('input');
     this.input.type = "hidden";
     this.input.value = options[0].id;
-    this.selectGroup.appendChild(input);
+    this.selectGroup.appendChild(this.input);
 
-    addEventListeners();
+    // Finally, append this to where the select element was and add the event listeners
+    select.parentNode.insertBefore(this.wrapper, select.nextSibling);
+    select.remove();
+    addEventListeners(this);
 }
 
-function addEventListeners() {
+function addEventListeners(selectal) {
     var options = document.querySelectorAll('.selectal-dropdown-option');
     document.querySelector('.selectal-btn').addEventListener('click', function() {
         var dropdown = this.parentNode.querySelector('.selectal-dropdown');
-        toggleDropdown(dropdown, this.parentNode);
+        selectal.toggleDropdown();
     });
 
     for(var i=0;i<options.length;i++) {
@@ -64,26 +65,22 @@ function addEventListeners() {
             var selectedText = this.parentNode.parentNode.querySelector('#selectal-selected-item');
             selectedText.innerHTML = text;
             input.value = this.id;
-            toggleDropdown(dropdown, selectGroup);
+            selectal.toggleDropdown();
         });
     }
 }
 
-function toggleDropdown(dropdown, selectGroup) {
-    var dropdown = this.dropdown | dropdown;
-    var selectGroup = this.selectGroup | selectGroup;
-    var arrow = selectGroup.querySelector('#arrow');
-    var selectBtn = selectGroup.querySelector('.selectal-btn');
-    if(dropdown.classList.contains("hidden")) {
-        dropdown.classList.remove("hidden");
-        selectBtn.classList.add("no-bottom-radius");
-        arrow.classList.remove("arrow-down");
-        arrow.classList.add("arrow-up");
+function toggleDropdown() {
+    if(this.dropdown.classList.contains("hidden")) {
+        this.dropdown.classList.remove("hidden");
+        this.selectBtn.classList.add("no-bottom-radius");
+        this.arrow.classList.remove("arrow-down");
+        this.arrow.classList.add("arrow-up");
     } else {
-        dropdown.classList.add("hidden");
-        selectBtn.classList.remove("no-bottom-radius");
-        arrow.classList.remove("arrow-up");
-        arrow.classList.add("arrow-down");
+        this.dropdown.classList.add("hidden");
+        this.selectBtn.classList.remove("no-bottom-radius");
+        this.arrow.classList.remove("arrow-up");
+        this.arrow.classList.add("arrow-down");
     }
 }
 

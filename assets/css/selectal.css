@@ -1,60 +1,63 @@
 /* Contains the default styles for the selectal box */
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css);
-.selectal-group {
-  font-family: arial;
-  font-size: 18px;
-  line-height: 1.2;
-  float: left;
-  clear: left;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */ }
-  .selectal-group .selectal-btn {
-    cursor: pointer;
-    border: 0.5px solid lightgrey;
-    border-radius: 5px;
-    width: inherit;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
-    .selectal-group .selectal-btn p {
-      padding: 5px;
-      margin: 0; }
-    .selectal-group .selectal-btn span {
-      padding: 5px;
-      outline: 0.5px solid rgba(0, 0, 0, 0);
-      border: 0.5px solid rgba(0, 0, 0, 0); }
-    .selectal-group .selectal-btn:hover {
-      border-color: #0096fa; }
-      .selectal-group .selectal-btn:hover span {
-        color: #0096fa; }
-      .selectal-group .selectal-btn:hover p {
-        color: #0096fa; }
-  .selectal-group .selectal-dropdown {
-    cursor: pointer;
-    border: 0.5px solid lightgrey; }
-    .selectal-group .selectal-dropdown .selectal-dropdown-option {
-      margin: 0;
-      padding: 5px; }
-      .selectal-group .selectal-dropdown .selectal-dropdown-option:first-child {
-        border-top: 0; }
-      .selectal-group .selectal-dropdown .selectal-dropdown-option:last-child {
-        border-bottom: 0; }
-      .selectal-group .selectal-dropdown .selectal-dropdown-option:hover {
-        color: white;
-        background: #3399ff; }
-  .selectal-group .arrow-down::after {
-    font-family: FontAwesome;
-    content: "\f107"; }
-  .selectal-group .arrow-up::after {
-    content: "\f106";
-    font-family: FontAwesome; }
-  .selectal-group .hidden {
-    visibility: hidden; }
+.selectal-wrapper {
+  display: inline-block; }
+  .selectal-wrapper .selectal-group {
+    font-family: arial;
+    font-size: 18px;
+    line-height: 1.2;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+    display: inline-block; }
+    .selectal-wrapper .selectal-group .selectal-btn {
+      background-color: white;
+      cursor: pointer;
+      border: 0.5px solid lightgrey;
+      border-radius: 5px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; }
+      .selectal-wrapper .selectal-group .selectal-btn p {
+        padding: 5px;
+        margin: 0; }
+      .selectal-wrapper .selectal-group .selectal-btn span {
+        padding: 5px;
+        outline: 0.5px solid rgba(0, 0, 0, 0);
+        border: 0.5px solid rgba(0, 0, 0, 0); }
+      .selectal-wrapper .selectal-group .selectal-btn:hover {
+        border-color: #0096fa; }
+        .selectal-wrapper .selectal-group .selectal-btn:hover span {
+          color: #0096fa; }
+        .selectal-wrapper .selectal-group .selectal-btn:hover p {
+          color: #0096fa; }
+    .selectal-wrapper .selectal-group .selectal-dropdown {
+      position: absolute;
+      background-color: white;
+      cursor: pointer;
+      border: 0.5px solid lightgrey; }
+      .selectal-wrapper .selectal-group .selectal-dropdown .selectal-dropdown-option {
+        margin: 0;
+        padding: 5px; }
+        .selectal-wrapper .selectal-group .selectal-dropdown .selectal-dropdown-option:first-child {
+          border-top: 0; }
+        .selectal-wrapper .selectal-group .selectal-dropdown .selectal-dropdown-option:last-child {
+          border-bottom: 0; }
+        .selectal-wrapper .selectal-group .selectal-dropdown .selectal-dropdown-option:hover {
+          color: white;
+          background: #3399ff; }
+    .selectal-wrapper .selectal-group .arrow-down::after {
+      font-family: FontAwesome;
+      content: "\f107"; }
+    .selectal-wrapper .selectal-group .arrow-up::after {
+      content: "\f106";
+      font-family: FontAwesome; }
+    .selectal-wrapper .selectal-group .hidden {
+      visibility: hidden; }
 
 /*# sourceMappingURL=selectal.css.map */
