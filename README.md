@@ -13,7 +13,6 @@ or manually download the files you need from github.
 In the javascript files where you need it:
 ```
 const selectal = require('selectal');
-
 var mySelect = new Selectal('#my-select');
 ```
 or include
