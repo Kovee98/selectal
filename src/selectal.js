@@ -85,3 +85,8 @@ function toggleDropdown() {
 }
 
 Selectal.prototype.toggleDropdown = toggleDropdown;
+
+module.exports = {
+    Selectal,
+    toggleDropdown
+};
