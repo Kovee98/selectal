@@ -1,34 +1,40 @@
 {
-  "name": "selectal",
-  "version": "1.0.0",
-  "description": "A minimal, no-jQuery, user-stylable select element solution.",
-  "main": "main.js",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt-frontend": "^2.0.4",
-    "grunt": "^1.0.4",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-qunit": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-uglify": "*",
-    "matchdep": "*"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kovee98/selectal.git"
-  },
-  "keywords": [
-    "select",
-    "vanilla",
-    "js"
-  ],
-  "author": "Joshua Kovalchik",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kovee98/selectal/issues"
-  },
-  "homepage": "https://github.com/Kovee98/selectal#readme"
+    "name": "selectal",
+    "version": "1.0.3",
+    "description": "A minimal, no-jQuery, user-stylable select element solution.",
+    "main": "./dist/selectal.min.js",
+    "style": "./dist/select2.min.css",
+    "files": [
+        "src/*.css",
+        "src/*.js",
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "grunt-frontend": "^2.0.4",
+        "grunt": "^1.0.4",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-qunit": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-uglify": "*",
+        "matchdep": "*"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kovee98/selectal.git"
+    },
+    "keywords": [
+        "select",
+        "vanilla",
+        "js"
+    ],
+    "author": "Joshua Kovalchik",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kovee98/selectal/issues"
+    },
+    "homepage": "https://github.com/Kovee98/selectal#readme"
 }
