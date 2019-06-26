@@ -7,7 +7,7 @@ Run the following from a command line:
 npm install selectal
 ```
 
-or manually download the files you need from the github.
+or manually download the files you need from github.
 
 ## Usage
 In the javascript files where you need it:
@@ -16,11 +16,16 @@ const selectal = require('selectal');
 
 var mySelect = new Selectal('#my-select');
 ```
-or
+or include
 ```
-<script src='selectal.min.js'>
+<script src='<installation_directory>/dist/selectal.min.js'>
 ```
 in your html.
+
+and include the base styling by including the script in your html:
+```
+<link rel="stylesheet" href="<installation_directory>/dist/selectal.min.css" crossorigin="anonymous">
+```
 
 ## Customize
 Use the following classes to customize your select to your hearts content.

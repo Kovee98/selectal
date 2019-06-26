@@ -20,12 +20,12 @@ var Selectal = function(selectStr) {
 
     this.arrow = document.createElement('span');
     this.arrow.id = "arrow";
-    this.arrow.className = "arrow-up";
+    this.arrow.className = "arrow-down";
     this.selectBtn.appendChild(this.arrow);
     this.selectGroup.appendChild(this.selectBtn);
 
     this.dropdown = document.createElement('div');
-    this.dropdown.className = "selectal-dropdown";
+    this.dropdown.className = "selectal-dropdown hidden";
 
     for(var i=0;i<options.length;i++) {
         var option = document.createElement('p');
