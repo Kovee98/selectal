@@ -1,6 +1,6 @@
 {
     "name": "selectal",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A minimal, no-jQuery, user-stylable select element solution.",
     "main": "./dist/selectal.min.js",
     "style": "./dist/select2.min.css",
