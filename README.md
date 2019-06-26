@@ -34,5 +34,6 @@ Use the following classes to customize your select to your hearts content.
 * selectal-wrapper
 	* selectal-group
 		* selectal-btn
+			* selectal-selected-item
 		* selectal-dropdown
 			* selectal-dropdown-option
