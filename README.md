@@ -7,7 +7,7 @@ Run the following command:
 npm install selectal
 ```
 
-or manually download the files you need from github.
+or manually download the files you need from [here](https://github.com/Kovee98/selectal/releases "Releases").
 
 ## Usage
 In the javascript files where you need it:
