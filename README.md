@@ -31,7 +31,7 @@ Use the following classes to customize to your hearts content.
 #### Classes
 * selectal-wrapper
 	* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-group`
-		* ![#cc0000](https://placehold.it/15/cc0000/000000?text=+) `selectal-btn`
+		* ![#00cc00](https://placehold.it/15/00cc00/000000?text=+) `selectal-btn`
 			* ![#FFFF33](https://placehold.it/15/FFFF33/000000?text=+) `selectal-selected-item`
 		* ![#f07b27](https://placehold.it/15/f07b27/000000?text=+) `selectal-dropdown`
 			* ![#ff3333](https://placehold.it/15/ff3333/000000?text=+) `selectal-dropdown-option`
