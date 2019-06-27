@@ -1,8 +1,8 @@
 # Selectal
-Select elements made pretty and simple.
+Select element styling made simple and fun.
 
 ## Install
-Run the following from a command line:
+Run the following command:
 ```
 npm install selectal
 ```
@@ -27,7 +27,7 @@ and include the base styling by including the script in your html:
 ```
 
 ## Customize
-Use the following classes to customize your select to your hearts content.
+Use the following classes to customize to your hearts content.
 
 #### Classes
 * selectal-wrapper
