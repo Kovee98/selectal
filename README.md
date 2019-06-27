@@ -30,8 +30,10 @@ Use the following classes to customize to your hearts content.
 
 #### Classes
 * selectal-wrapper
-	* selectal-group
-		* selectal-btn
-			* selectal-selected-item
-		* selectal-dropdown
-			* selectal-dropdown-option
+	* ![#FF7F00](https://placehold.it/15/f03c15/000000?text=+) `selectal-group`
+		* ![#00CC00](https://placehold.it/15/f03c15/000000?text=+) `selectal-btn`
+			* ![#33FFFF](https://placehold.it/15/f03c15/000000?text=+) `selectal-selected-item`
+		* ![#007FFF](https://placehold.it/15/f03c15/000000?text=+) `selectal-dropdown`
+			* ![#3333FF](https://placehold.it/15/f03c15/000000?text=+) `selectal-dropdown-option`
+			
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
