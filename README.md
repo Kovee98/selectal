@@ -36,4 +36,4 @@ Use the following classes to customize to your hearts content.
 		* ![#007FFF](https://placehold.it/15/f03c15/000000?text=+) `selectal-dropdown`
 			* ![#3333FF](https://placehold.it/15/f03c15/000000?text=+) `selectal-dropdown-option`
 			
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt styling_diagram.png](https://github.com/Kovee98/selectal/blob/develop/styling_diagram.png)
