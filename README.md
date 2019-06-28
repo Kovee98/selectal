@@ -29,7 +29,6 @@ and include the base styling by including the script in your html:
 Use the following classes to customize to your hearts content.
 
 #### Classes
-![[Style Diagram](https://github.com/Kovee98/selectal/releases "style_diagram.png")](https://github.com/Kovee98/selectal/blob/develop/styling_diagram.png)
 <img src="https://github.com/Kovee98/selectal/blob/develop/styling_diagram.png">
 * selectal-wrapper
 	* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-group`
