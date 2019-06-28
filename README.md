@@ -30,7 +30,7 @@ Use the following classes to customize to your hearts content.
 
 #### Classes
 
-<img src="https://github.com/Kovee98/selectal/blob/develop/styling_diagram.png">
+<img src="https://raw.githubusercontent.com/Kovee98/selectal/develop/styling_diagram.png">
 
 * selectal-wrapper
 	* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-group`
