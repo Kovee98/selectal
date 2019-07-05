@@ -7,26 +7,29 @@ Run the following command:
 npm install selectal
 ```
 
-or manually download the files you need from [here](https://github.com/Kovee98/selectal/releases "Releases").
+or manually download the files you need from [GitHub Releases](https://github.com/Kovee98/selectal/releases "GitHub Releases").
 
 ## Usage
-In the javascript files where you need it:
+Include the styling in your html:
+```
+<link rel="stylesheet" href="<installation_directory>/selectal.min.css">
+```
+Include the code as an npm package in your javascript:
 ```
 const selectal = require('selectal');
+```
+... or as a script in your html:
+```
+<script src='<installation_directory>/selectal.min.js'>
+```
+
+Then just initialize your select box:
+```
 var mySelect = new Selectal('#my-select');
-```
-or include
-```
-<script src='<installation_directory>/dist/selectal.min.js'>
-```
-in your html.
-and include the base styling by including the script in your html:
-```
-<link rel="stylesheet" href="<installation_directory>/dist/selectal.min.css" crossorigin="anonymous">
 ```
 
 ## Customize
-Use the following classes to customize to your hearts content.
+The following classes can be used to customize your select box:
 
 #### Classes
 
@@ -38,3 +41,12 @@ Use the following classes to customize to your hearts content.
 			* ![#FFFF33](https://placehold.it/15/FFFF33/000000?text=+) `selectal-selected-item`
 		* ![#f07b27](https://placehold.it/15/f07b27/000000?text=+) `selectal-dropdown`
 			* ![#ff3333](https://placehold.it/15/ff3333/000000?text=+) `selectal-dropdown-option`
+
+
+## Contribute
+Feature you'd like to improve? Bug you'd like to fix? Theme you'd like to share? Pull requests are more than welcome here. 
+##### Here's an outline for the theme submissions:
+* /themes
+	* /{your-theme}-theme
+		* {your-theme}.css
+		* {your-theme}.png
