@@ -2,13 +2,10 @@ var Selectal = function(selectStr) {
     // Create the necessary elements and structure
     var select = document.querySelector(selectStr);
     var options = select.querySelectorAll('option');
-    this.wrapper = document.createElement('div');
-    this.wrapper.className = "selectal-wrapper";
 
     this.selectGroup = document.createElement('div');
     this.selectGroup.className = "selectal-group";
-    this.selectGroup.id = select.id;
-    this.wrapper.appendChild(this.selectGroup);
+    this.selectGroup.id = select.id + "-selectal";
 
     this.selectBtn = document.createElement('div');
     this.selectBtn.className = "selectal-btn";
@@ -40,10 +37,11 @@ var Selectal = function(selectStr) {
     this.input = document.createElement('input');
     this.input.type = "hidden";
     this.input.value = options[0].id;
+    this.input.id = select.id;
     this.selectGroup.appendChild(this.input);
 
     // Finally, append this to where the select element was and add the event listeners
-    select.parentNode.insertBefore(this.wrapper, select.nextSibling);
+    select.parentNode.insertBefore(this.selectGroup, select.nextSibling);
     select.remove();
     addEventListeners(this);
 }
@@ -65,11 +63,13 @@ function addEventListeners(selectal) {
             var selectedText = this.parentNode.parentNode.querySelector('#selectal-selected-item');
             selectedText.innerHTML = text;
             input.value = this.id;
+            input.dispatchEvent(new Event('change'));
             selectal.toggleDropdown();
         });
     }
 }
 
+// Public functions
 function toggleDropdown() {
     if(this.dropdown.classList.contains("hidden")) {
         this.dropdown.classList.remove("hidden");
@@ -84,6 +84,15 @@ function toggleDropdown() {
     }
 }
 
-Selectal.prototype.toggleDropdown = toggleDropdown;
+function addEventListener(event, fn) {
+    this.input.addEventListener(event, fn);
+}
 
+function removeEventListener(event, fn) {
+    this.input.removeEventListener(event, fn);
+}
+
+Selectal.prototype.toggleDropdown = toggleDropdown;
+Selectal.prototype.addEventListener = addEventListener;
+Selectal.prototype.removeEventListener = removeEventListener;
 module.exports = Selectal;
