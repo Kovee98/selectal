@@ -86,3 +86,13 @@
         }
     }
 }
+
+.selectal-selected-item {
+    display: flex;
+    align-items: center;
+}
+
+[class^=arrow-] {
+    display: flex;
+    align-items: center;
+}

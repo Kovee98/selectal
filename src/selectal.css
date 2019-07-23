@@ -64,4 +64,12 @@
     .selectal-btn:hover p {
       color: #0096fa; }
 
+.selectal-selected-item {
+  display: flex;
+  align-items: center; }
+
+[class^=arrow-] {
+  display: flex;
+  align-items: center; }
+
 /*# sourceMappingURL=selectal.css.map */

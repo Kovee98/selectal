@@ -1,3 +1,4 @@
+
 # Selectal
 Select box styling made simple and fun.
 
@@ -38,21 +39,7 @@ const selectal = require('selectal');
 ```
 var mySelect = new Selectal('#my-select');
 ```
-
-
-#### Events
-~~~
-mySelectal.addEventListener('change', function() {
-	console.log("selectal has changed to", this.value);
-});
-~~~
-
-#### Public Methods
-|Method|Description|
-|---|---|
-|toggleDropdown|Toggles the dropdown open (if it's closed) or closed (if it's open)|
-|addEventListener|Adds an event listener|
-|removeEventListener|Removes a previously added event listener|
+See the official documentation [here](https://github.com/Kovee98/selectal/releases "GitHub Releases").
 
 
 ## Customize
@@ -63,7 +50,7 @@ The following classes can be used to customize your select box:
 <img src="https://raw.githubusercontent.com/Kovee98/selectal/develop/styling_diagram.png">
 
 
-* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-group`
+* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-group` (wrapper)
 	* ![#00cc00](https://placehold.it/15/00cc00/000000?text=+) `selectal-btn`
 		* ![#FFFF33](https://placehold.it/15/FFFF33/000000?text=+) `selectal-selected-item`
 	* ![#f07b27](https://placehold.it/15/f07b27/000000?text=+) `selectal-dropdown`

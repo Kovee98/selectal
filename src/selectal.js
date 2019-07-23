@@ -11,12 +11,11 @@ var Selectal = function(selectStr) {
     this.selectBtn.className = "selectal-btn";
 
     this.selectedItem = document.createElement('p');
-    this.selectedItem.id = "selectal-selected-item";
+    this.selectedItem.className = "selectal-selected-item";
     this.selectedItem.innerHTML = options[0].innerHTML;
     this.selectBtn.appendChild(this.selectedItem);
 
     this.arrow = document.createElement('span');
-    this.arrow.id = "arrow";
     this.arrow.className = "arrow-down";
     this.selectBtn.appendChild(this.arrow);
     this.selectGroup.appendChild(this.selectBtn);
@@ -60,7 +59,7 @@ function addEventListeners(selectal) {
             var input = selectGroup.querySelector('input');
             var selectBtn = selectGroup.querySelector('.selectal-btn');
             var text = this.innerHTML;
-            var selectedText = this.parentNode.parentNode.querySelector('#selectal-selected-item');
+            var selectedText = this.parentNode.parentNode.querySelector('.selectal-selected-item');
             selectedText.innerHTML = text;
             input.value = this.id;
             input.dispatchEvent(new Event('change'));
@@ -84,6 +83,24 @@ function toggleDropdown() {
     }
 }
 
+function isDropdownOpen() {
+    return !this.dropdown.classList.contains("hidden");
+}
+
+function closeDropdown() {
+    this.dropdown.classList.add("hidden");
+    this.selectBtn.classList.remove("no-bottom-radius");
+    this.arrow.classList.remove("arrow-up");
+    this.arrow.classList.add("arrow-down");
+}
+
+function openDropdown() {
+    this.dropdown.classList.remove("hidden");
+    this.selectBtn.classList.add("no-bottom-radius");
+    this.arrow.classList.remove("arrow-down");
+    this.arrow.classList.add("arrow-up");
+}
+
 function addEventListener(event, fn) {
     this.input.addEventListener(event, fn);
 }
@@ -95,4 +112,7 @@ function removeEventListener(event, fn) {
 Selectal.prototype.toggleDropdown = toggleDropdown;
 Selectal.prototype.addEventListener = addEventListener;
 Selectal.prototype.removeEventListener = removeEventListener;
+Selectal.prototype.isDropdownOpen = isDropdownOpen;
+Selectal.prototype.closeDropdown = closeDropdown;
+Selectal.prototype.openDropdown = openDropdown;
 module.exports = Selectal;
