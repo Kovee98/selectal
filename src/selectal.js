@@ -21,7 +21,7 @@ var Selectal = function(selectStr) {
     this.selectGroup.appendChild(this.selectBtn);
 
     this.dropdown = document.createElement('div');
-    this.dropdown.className = "selectal-dropdown hidden";
+    this.dropdown.className = "selectal-dropdown selectal-hidden";
 
     for(var i=0;i<options.length;i++) {
         var option = document.createElement('p');
@@ -70,13 +70,13 @@ function addEventListeners(selectal) {
 
 // Public functions
 function toggleDropdown() {
-    if(this.dropdown.classList.contains("hidden")) {
-        this.dropdown.classList.remove("hidden");
+    if(this.dropdown.classList.contains("selectal-hidden")) {
+        this.dropdown.classList.remove("selectal-hidden");
         this.selectBtn.classList.add("no-bottom-radius");
         this.arrow.classList.remove("arrow-down");
         this.arrow.classList.add("arrow-up");
     } else {
-        this.dropdown.classList.add("hidden");
+        this.dropdown.classList.add("selectal-hidden");
         this.selectBtn.classList.remove("no-bottom-radius");
         this.arrow.classList.remove("arrow-up");
         this.arrow.classList.add("arrow-down");
@@ -84,18 +84,18 @@ function toggleDropdown() {
 }
 
 function isDropdownOpen() {
-    return !this.dropdown.classList.contains("hidden");
+    return !this.dropdown.classList.contains("selectal-hidden");
 }
 
 function closeDropdown() {
-    this.dropdown.classList.add("hidden");
+    this.dropdown.classList.add("selectal-hidden");
     this.selectBtn.classList.remove("no-bottom-radius");
     this.arrow.classList.remove("arrow-up");
     this.arrow.classList.add("arrow-down");
 }
 
 function openDropdown() {
-    this.dropdown.classList.remove("hidden");
+    this.dropdown.classList.remove("selectal-hidden");
     this.selectBtn.classList.add("no-bottom-radius");
     this.arrow.classList.remove("arrow-down");
     this.arrow.classList.add("arrow-up");
