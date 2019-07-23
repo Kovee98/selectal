@@ -1,4 +1,3 @@
-
 # Selectal
 Select box styling made simple and fun.
 
@@ -39,7 +38,7 @@ const selectal = require('selectal');
 ```
 var mySelect = new Selectal('#my-select');
 ```
-See the official documentation [here](https://github.com/Kovee98/selectal/releases "GitHub Releases").
+See the official documentation [here](https://www.selectal.org/ "selectal.org").
 
 
 ## Customize
@@ -50,11 +49,12 @@ The following classes can be used to customize your select box:
 <img src="https://raw.githubusercontent.com/Kovee98/selectal/develop/styling_diagram.png">
 
 
-* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-group` (wrapper)
-	* ![#00cc00](https://placehold.it/15/00cc00/000000?text=+) `selectal-btn`
-		* ![#FFFF33](https://placehold.it/15/FFFF33/000000?text=+) `selectal-selected-item`
-	* ![#f07b27](https://placehold.it/15/f07b27/000000?text=+) `selectal-dropdown`
-		* ![#ff3333](https://placehold.it/15/ff3333/000000?text=+) `selectal-dropdown-option`
+* `selectal-group` (wrapper)
+	* ![#007FFF](https://placehold.it/15/007FFF/000000?text=+) `selectal-btn`
+		* ![#00cc00](https://placehold.it/15/00cc00/000000?text=+) `selectal-selected-item`
+		* ![#FFFF33](https://placehold.it/15/FFFF33/000000?text=+) `arrow-[up|down]`
+	* ![#7520FC](https://placehold.it/15/7520FC/000000?text=+) `selectal-dropdown`
+		* ![#f07b27](https://placehold.it/15/f07b27/000000?text=+) `selectal-dropdown-option`
 
 
 ## Contribute
