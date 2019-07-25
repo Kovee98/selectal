@@ -35,7 +35,7 @@ var Selectal = function(selectStr) {
     var selectId = select.id;
     this.input = document.createElement('input');
     this.input.type = "hidden";
-    this.input.value = options[0].id;
+    this.input.value = options[0].value;
     this.input.id = select.id;
     this.selectGroup.appendChild(this.input);
 
