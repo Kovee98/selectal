@@ -42,7 +42,7 @@ var Selectal = function(selectStr) {
     // Finally, append this to where the select element was and add the event listeners
     select.parentNode.insertBefore(this.selectGroup, select.nextSibling);
     select.remove();
-    addEventListeners(this);
+    this.options = addEventListeners(this);
 }
 
 function addEventListeners(selectal) {
@@ -66,6 +66,7 @@ function addEventListeners(selectal) {
             selectal.toggleDropdown();
         });
     }
+    return options;
 }
 
 // Public functions
@@ -109,10 +110,28 @@ function removeEventListener(event, fn) {
     this.input.removeEventListener(event, fn);
 }
 
+function getValue() {
+    var value = this.input.value;
+    return value;
+}
+
+function setValue(value) {
+    for(var i = 0; i < this.options.length; i++) {
+        var option = this.options[i];
+        if(option.id == value) {
+            this.input.value = value;
+            var selectedText = option.parentNode.parentNode.querySelector('.selectal-selected-item');
+            selectedText.innerHTML = option.innerHTML;
+        }
+    }
+}
+
 Selectal.prototype.toggleDropdown = toggleDropdown;
 Selectal.prototype.addEventListener = addEventListener;
 Selectal.prototype.removeEventListener = removeEventListener;
 Selectal.prototype.isDropdownOpen = isDropdownOpen;
 Selectal.prototype.closeDropdown = closeDropdown;
 Selectal.prototype.openDropdown = openDropdown;
+Selectal.prototype.getValue = getValue;
+Selectal.prototype.setValue = setValue;
 module.exports = Selectal;
