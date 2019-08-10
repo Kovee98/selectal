@@ -47,7 +47,7 @@ var Selectal = function(selectStr) {
 
 function addEventListeners(selectal) {
     var options = document.querySelectorAll('.selectal-dropdown-option');
-    document.querySelector('.selectal-btn').addEventListener('click', function() {
+    selectal.selectBtn.addEventListener('click', function() {
         var dropdown = this.parentNode.querySelector('.selectal-dropdown');
         selectal.toggleDropdown();
     });
@@ -63,7 +63,7 @@ function addEventListeners(selectal) {
             selectedText.innerHTML = text;
             input.value = this.id;
             input.dispatchEvent(new Event('change'));
-            selectal.toggleDropdown();
+            selectal.closeDropdown();
         });
     }
     return options;
